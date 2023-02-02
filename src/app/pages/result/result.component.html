@@ -1,0 +1,21 @@
+<div class="mainResult">
+  <div class="card" *ngFor="let hero of data">
+    <div
+      class="front-face"
+      [ngStyle]="{
+        'background-image':
+          'url(' + hero.thumbnail.path + '.' + hero.thumbnail.extension + ')',
+        'background-size': 'cover',
+        'background-position': 'center',
+        height: '100%',
+        width: '100%'
+      }"
+    >
+      {{ hero.name }}
+    </div>
+    <div class="back-face">
+      <p>{{ hero.description ? hero.description : "Não tem descrição" }}</p>
+      <button type="button" class="buttonSeeDetails">Ver detalhes</button>
+    </div>
+  </div>
+</div>

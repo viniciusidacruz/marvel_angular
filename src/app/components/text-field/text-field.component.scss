@@ -1,0 +1,19 @@
+.wrapper {
+  height: 3rem;
+  max-width: 550px;
+  width: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2edd0;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
+
+  input {
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+  }
+}

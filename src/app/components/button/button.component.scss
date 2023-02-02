@@ -1,0 +1,14 @@
+.wrapper {
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: #f2edd0;
+  background-color: #0a3873;
+  max-width: 220px;
+  padding: 0 1rem;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(1.3);
+  }
+}
