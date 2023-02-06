@@ -26,9 +26,11 @@ export class ResultComponent implements OnInit {
   ngOnInit() {
     this.route.queryParamMap.subscribe((params) => {
       const hero_name = params.get('value');
-      const response = this.heroesService.getHero(hero_name);
 
-      this.data = response?.data.results;
+      this.heroesService.getHero(hero_name).subscribe((response) => {
+        console.log(response);
+        this.data = response.data.results;
+      });
     });
   }
 }
