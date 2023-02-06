@@ -1,4 +1,8 @@
 <form class="wrapper" (ngSubmit)="onSubmit()">
-  <input [(ngModel)]="fieldValue" name="fieldValue" />
+  <input
+    placeholder="Nome do heroi..."
+    [(ngModel)]="fieldValue"
+    name="fieldValue"
+  />
   <app-button [titleButton]="callToSearch"></app-button>
 </form>

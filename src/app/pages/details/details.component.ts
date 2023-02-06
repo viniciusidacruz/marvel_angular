@@ -19,9 +19,12 @@ export class DetailsComponent {
   ngOnInit() {
     this.route.queryParamMap.subscribe((params) => {
       const hero_id = params.get('id');
-      const response = this.heroesService.getDetails(hero_id);
 
-      this.data = response?.data.results[0];
+      this.heroesService.getDetails(hero_id).subscribe((response) => {
+        this.data = response.data.results[0];
+      });
     });
+
+    console.log(this.data);
   }
 }
