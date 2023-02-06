@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IResult } from 'src/app/models/response';
 import { HeroesService } from 'src/app/services/heroes.service';
 
@@ -13,8 +13,15 @@ export class ResultComponent implements OnInit {
 
   constructor(
     private heroesService: HeroesService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
+
+  redirectToDetails(id: number): void {
+    this.router.navigate(['/details'], {
+      queryParams: { id },
+    });
+  }
 
   ngOnInit() {
     this.route.queryParamMap.subscribe((params) => {

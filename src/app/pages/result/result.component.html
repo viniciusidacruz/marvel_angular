@@ -15,7 +15,13 @@
     </div>
     <div class="back-face">
       <p>{{ hero.description ? hero.description : "Não tem descrição" }}</p>
-      <button type="button" class="buttonSeeDetails">Ver detalhes</button>
+      <button
+        type="button"
+        class="buttonSeeDetails"
+        (click)="redirectToDetails(hero.id)"
+      >
+        Ver detalhes
+      </button>
     </div>
   </div>
 </div>

@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ResultComponent } from './pages/result/result.component';
 import { ButtonComponent } from './components/button/button.component';
 import { TextFieldComponent } from './components/text-field/text-field.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { TextFieldComponent } from './components/text-field/text-field.component
     TextFieldComponent,
     ResultComponent,
     HomeComponent,
+    DetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
