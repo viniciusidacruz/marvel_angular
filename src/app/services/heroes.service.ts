@@ -7,6 +7,7 @@ import { IResponse } from '../models/response';
 })
 export class HeroesService {
   data: any = null;
+  details: any = null;
 
   constructor(private http: HttpClient) {}
 
@@ -20,5 +21,17 @@ export class HeroesService {
       });
 
     return this.data;
+  }
+
+  getDetails(id: string | null) {
+    this.http
+      .get(
+        `https://gateway.marvel.com:443/v1/public/characters/${id}?ts=1&apikey=dfdfc06935a1fe33837da6934f7b5373&hash=f5a214e5c63b897dfe0ebc1a1185c936`
+      )
+      .subscribe((response) => {
+        this.details = response;
+      });
+
+    return this.details;
   }
 }
