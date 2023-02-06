@@ -28,7 +28,6 @@ export class ResultComponent implements OnInit {
       const hero_name = params.get('value');
 
       this.heroesService.getHero(hero_name).subscribe((response) => {
-        console.log(response);
         this.data = response.data.results;
       });
     });
