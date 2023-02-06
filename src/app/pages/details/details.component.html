@@ -1,0 +1,53 @@
+<main class="mainResult">
+  <header class="header">
+    <img
+      *ngIf="data"
+      [src]="data.thumbnail.path + '.' + data.thumbnail.extension"
+      alt=""
+    />
+
+    <h1>{{ data?.name }}</h1>
+  </header>
+
+  <section class="lists">
+    <div class="list">
+      <h1>Comics</h1>
+
+      <ul *ngFor="let comic of data?.comics?.items">
+        <li>
+          <p>{{ comic.name }}</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="list">
+      <h1>Events</h1>
+
+      <ul *ngFor="let event of data?.events?.items">
+        <li>
+          <p>{{ event.name }}</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="list">
+      <h1>Series</h1>
+
+      <ul *ngFor="let serie of data?.series?.items">
+        <li>
+          <p>{{ serie.name }}</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="list">
+      <h1>Stories</h1>
+
+      <ul *ngFor="let storie of data?.stories?.items">
+        <li>
+          <p>{{ storie.name }}</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
